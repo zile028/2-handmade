@@ -53,6 +53,9 @@ h2 {
     color: $gray;
     font-size: 2.7rem;
     text-align: center;
+    @media (max-width: 767px) {
+        font-size: 2.2rem;
+    }
     &::after {
         content: "";
         display: block;
@@ -65,10 +68,16 @@ h2 {
 h3 {
     @extend h2;
     font-size: 2rem;
+    @media (max-width: 767px) {
+        font-size: 1.7rem;
+    }
 }
 h4 {
     color: $gray;
     font-size: 1.6rem;
+    @media (max-width: 767px) {
+        font-size: 1.4rem;
+    }
 }
 a {
     text-decoration: none;
@@ -105,9 +114,12 @@ header {
         bottom: 0;
     }
     nav {
+        @media (max-width: 767px) {
+            text-align: center;
+        }
         h1 {
             color: $white;
-            background-color: $black;
+            background-color: rgba($black, 0.9);
             padding: 10px 40px;
             font-size: 3rem;
             display: inline-block;
@@ -115,8 +127,14 @@ header {
         }
         ul {
             @include flex(flex-start, center);
+            @media (max-width: 767px) {
+                justify-content: space-between;
+            }
             li {
                 background: rgba($black, 1);
+                @media (max-width: 767px) {
+                    flex: 1;
+                }
                 a {
                     display: block;
                     background: linear-gradient(rgba($white, 0.2), rgba($white, 0.2)), $orange;
@@ -124,6 +142,9 @@ header {
                     padding: 10px 35px;
                     font-weight: 500;
                     transition: $transition;
+                    @media (max-width: 767px) {
+                        padding: 10px 0px;
+                    }
                     &:hover {
                         opacity: 0.7;
                     }
@@ -132,9 +153,15 @@ header {
         }
     }
 }
+.welcome,
+.about {
+    padding: $py 0;
+    @media (max-width: 767px) {
+        padding: 20px 0;
+    }
+}
 // welcome
 .welcome {
-    padding: $py;
     text-align: center;
     p {
         margin-top: 40px;
@@ -143,13 +170,16 @@ header {
 // about
 .about {
     background: $white;
-    padding: $py;
     .container {
         @include flex(space-between, center);
         text-align: center;
         margin-top: 20px;
         .col {
             flex: 0 0 30%;
+            @media (max-width: 767px) {
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+            }
             h4 {
                 margin-bottom: 20px;
             }
@@ -168,6 +198,9 @@ header {
         margin-top: 50px;
         .col {
             flex: 0 0 22%;
+            @media (max-width: 767px) {
+                flex: 0 0 100%;
+            }
             img {
                 width: 100%;
                 display: block;
@@ -184,6 +217,9 @@ footer {
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
+    @media (max-width: 767px) {
+        padding: 40px 0;
+    }
     span {
         font-size: 1.5rem;
         color: red;

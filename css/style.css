@@ -20,6 +20,12 @@ h2, h3 {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  h2, h3 {
+    font-size: 2.2rem;
+  }
+}
+
 h2::after, h3::after {
   content: "";
   display: block;
@@ -33,9 +39,21 @@ h3 {
   font-size: 2rem;
 }
 
+@media (max-width: 767px) {
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
 h4 {
   color: #404040;
   font-size: 1.6rem;
+}
+
+@media (max-width: 767px) {
+  h4 {
+    font-size: 1.4rem;
+  }
 }
 
 a {
@@ -94,9 +112,15 @@ header::after {
   bottom: 0;
 }
 
+@media (max-width: 767px) {
+  header nav {
+    text-align: center;
+  }
+}
+
 header nav h1 {
   color: #fff;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 10px 40px;
   font-size: 3rem;
   display: inline-block;
@@ -121,8 +145,24 @@ header nav ul {
           flex-direction: row;
 }
 
+@media (max-width: 767px) {
+  header nav ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 header nav ul li {
   background: black;
+}
+
+@media (max-width: 767px) {
+  header nav ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 header nav ul li a {
@@ -136,12 +176,31 @@ header nav ul li a {
   transition: 0.4s ease;
 }
 
+@media (max-width: 767px) {
+  header nav ul li a {
+    padding: 10px 0px;
+  }
+}
+
 header nav ul li a:hover {
   opacity: 0.7;
 }
 
+.welcome,
+.about,
+.works {
+  padding: 90px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .welcome,
+  .about,
+  .works {
+    padding: 20px 0;
+  }
+}
+
 .welcome {
-  padding: 90px 0 80px;
   text-align: center;
 }
 
@@ -149,9 +208,10 @@ header nav ul li a:hover {
   margin-top: 40px;
 }
 
-.about, .works {
+
+.about,
+.works {
   background: #fff;
-  padding: 90px 0 80px;
 }
 
 .about .container, .works .container {
@@ -178,6 +238,15 @@ header nav ul li a:hover {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
+}
+
+@media (max-width: 767px) {
+  .about .container .col, .works .container .col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .about .container .col h4, .works .container .col h4 {
@@ -217,6 +286,14 @@ header nav ul li a:hover {
           flex: 0 0 22%;
 }
 
+@media (max-width: 767px) {
+  .works .container .col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .works .container .col img {
   width: 100%;
   display: block;
@@ -230,6 +307,12 @@ footer {
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  footer {
+    padding: 40px 0;
+  }
 }
 
 footer span {
