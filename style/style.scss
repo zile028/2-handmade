@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap");
+
+// variables
+$fontFamily: "Quicksand", sans-serif;
+$fontSize: 16px;
+$black: #000;
+$orange: #ff8a0e;
+$gray: #404040;
+$lightgray: #f3f3f3;
+$white: #fff;
+$transition: 0.4s ease;
+$py: 70px 0 100px;
+
+// mixins
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin btn {
+    border: none;
+    background: $orange;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background: $white;
+    }
+}
+// extend
+
+// reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $black;
+    background: $lightgray;
+    line-height: 1.6;
+}
+h2 {
+    color: $white;
+    font-size: 3rem;
+    text-align: center;
+    word-spacing: 2px;
+    margin-bottom: 15px;
+}
+h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h4 {
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 72%;
+    margin: 0 auto;
+    @media (max-width: 767px) {
+        width: 95%;
+    }
+}
